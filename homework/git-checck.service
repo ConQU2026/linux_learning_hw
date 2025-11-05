@@ -1,0 +1,13 @@
+[Unit]
+Description=Git Check Service
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/git_check_service.sh
+RemainAfterExit=yes
+User=root
+
+[Install]
+WantedBy=multi-user.target
+
